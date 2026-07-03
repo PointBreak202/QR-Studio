@@ -1,9 +1,11 @@
 import qrcode
+import io
 
-def generate_qr(url, filename):
-    if not(filename.endswith(".png")):
-        filename = filename + ".png"
-
+def generate_qr(url):
     img = qrcode.make(url)
-    type(img)
-    img.save(filename)
+
+    buffer = io.BytesIO()
+    img.save(buffer, format="PNG")
+    buffer.seek(0)
+
+    return buffer

@@ -31,7 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (response.ok) {
 
-            qrImage.src = "/static/generated/latest-qr.png?" + new Date().getTime();
+            const blob = await response.blob();
+            const imageUrl = URL.createObjectURL(blob);
+            qrImage.src = imageUrl;
 
             qrImage.onload = () => {
                 qrPlaceholder.style.display = "none";
