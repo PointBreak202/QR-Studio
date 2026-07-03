@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Studio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <img
+    src="{{ url_for('static', filename='svg/star.svg') }}"
+    class="star1 decoration">
+    <img
+    src="{{ url_for('static', filename='svg/star.svg') }}"
+    class="star2 decoration">
+    <img
+    src="{{ url_for('static', filename='svg/flower.svg') }}"
+    class="flower1 decoration">
+    <img
+    src="{{ url_for('static', filename='svg/flower.svg') }}"
+    class="flower2 decoration">
+    <img
+    src="{{ url_for('static', filename='svg/rainbow.svg') }}"
+    class="rainbow1 decoration">
+    <img
+    src="{{ url_for('static', filename='svg/cloud.svg') }}"
+    class="cloud decoration">
+    <img src="{{ url_for('static', filename='svg/blob.svg') }}" class="blob decoration">
+
+    <div class="container">
+
+        <header>
+
+                <div class="logo">
+
+        <div class="logo-icon">
+
+            <span class="dot d1"></span>
+            <span class="dot d2"></span>
+            <span class="dot d3"></span>
+            <span class="dot d4"></span>
+
+        </div>
+        <h2>QR Studio</h2>
+    </div>
+
+            <nav>
+                <button class="theme-btn">
+                🌙 Theme
+                </button>
+                <button class="about-btn">
+                ❤️ About
+                </button>
+            </nav>
+
+        </header>
+
+        <section class="hero">
+
+            <span class="badge">🌈 Free Forever</span>
+
+            <h1>QR Studio</h1>
+
+            <p>Create beautiful QR codes in seconds.</p>
+
+            <p class="hero-subtitle">
+            Perfect for portfolios, creators, businesses and events.
+            </p>
+
+        </section>
+
+        <main class="generator-card">
+
+            <div class="generator-top">
+
+    <section class="input-section">
+
+        <h2>🔗 Enter Your URL</h2>
+
+        <form id="qr-form">
+
+            <input
+                id="url-input"
+                type="text"
+                name="url"
+                placeholder="https://example.com"
+                required
+            >
+
+            <button id="generate-btn" type="submit">
+                ✨ Generate QR Code
+            </button>
+
+        </form>
+
+    </section>
+
+    <section class="preview-section">
+
+        <h2>✨ Preview</h2>
+
+        <div class="preview-card">
+
+            <div id="qr-placeholder">
+
+    <div class="placeholder-icon">
+        ⬜ ⬜<br>
+        ⬜ ◻
+    </div>
+
+    <p>Your QR code will appear here</p>
+
+</div>
+
+<img
+    id="qr-image"
+    class="hidden"
+    src=""
+    alt="Generated QR Code"
+>
+
+        </div>
+
+        <div class="actions">
+
+            <button class="download-btn" id="download-btn">
+                ⬇ Download PNG
+            </button>
+
+            <button class="copy-btn" id="copy-btn">
+                📋 Copy Link
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+<hr>
+
+<section class="features">
+
+    ...
+
+</section>
+
+        </main>
+
+        <footer>
+
+            <p>Built with ❤️ by Saksham Patil • QR Studio v1.0</p>
+
+        </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
